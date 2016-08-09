@@ -1,2 +1,36 @@
-<h1>Movies#show</h1>
-<p>Find me in app/views/movies/show.html.erb</p>
+<h1>
+<i class="fa fa-film" aria-hidden="true"></i>
+Movies#show
+<i class="fa fa-film" aria-hidden="true"></i>
+</h1>
+
+    <div class="row">
+      <div class="col-md-6 offset-md-1">
+      <blockquote class="blockquote">
+        <h3>
+          <%= @movie.name %>
+        </h3>
+
+
+
+        <h5> – <%= @movie.genre %>
+        <% if @movie.watched == true  %>
+          <i class="fa fa-check-circle-o"></i>
+        <% end %>
+        </h5>
+      </blockquote>
+      </div>
+    </div>
+
+  <h2></h2>
+
+
+  <p>
+  <%= link_to "Edit this movie", edit_movie_path, class: "btn btn-secondary" %>
+
+
+  <%= link_to "Delete", movie_path(@movie), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-secondary" %>
+
+
+  <%= link_to "View all movies", movies_path, class: "btn btn-secondary" %>
+  </p>

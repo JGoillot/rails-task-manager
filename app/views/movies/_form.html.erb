@@ -1,0 +1,13 @@
+<div class="row">
+<div class="col-md-6">
+<%= form_for(@movie) do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name, class: "form-control" %>
+  <%= f.label :genre %>
+  <%= f.text_field :genre, class: "form-control"%>
+  <%= f.label :watched? %>
+  <%= f.check_box :watched %><br>
+  <%= f.submit 'Add movie' ,class: "btn btn-secondary" %>
+<% end %>
+
+</div>
